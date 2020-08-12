@@ -1,0 +1,48 @@
+.menu {
+  width: 200px;
+  margin: 50px auto;
+}
+
+.menu__inner {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.notification {
+  display: inline-block;
+  width: 30px;
+  order: 2;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.badge {
+  display: none;
+  position: absolute;
+  content: "";
+  background-color: #bf1513;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 0;
+  left: 25px;
+}
+
+.avatar {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: contain;
+  order: 1;
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
+.notification .badge.active {
+  display: block;
+}
