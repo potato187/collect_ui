@@ -1,0 +1,95 @@
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.friends {
+  width: 300px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #262626;
+  margin: 50px auto;
+}
+
+.friends__inner {
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.recommend > p {
+  color: #999999;
+}
+
+.recommend > a {
+  font-size: 12px;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.list {
+  width: 100%;
+}
+
+.list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list ul li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.list li > img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.list li div {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.list li div span {
+  display: block;
+}
+.list li div span:last-child {
+  font-size: 10px;
+  color: #999;
+}
+
+.list li a {
+  display: block-inline;
+  font-size: 12px;
+  flex-grow: 1;
+  text-align: right;
+  color: #1876f2;
+}
