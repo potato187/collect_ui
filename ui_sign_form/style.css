@@ -1,0 +1,142 @@
+:root {
+  --color-text: #202020;
+  --primary: #548be6;
+  --bg-left: #ff4988;
+  --bg-middle: #ffc781;
+  --bg-right: #fffefc;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to top right, #ff4988, #ffc781, #fffefc);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  width: 40rem;
+  padding: 4rem 3rem;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+.signup__heading {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+.signup__desc {
+  font-size: 1.4rem;
+  color: #636e72;
+  margin-bottom: 3rem;
+}
+
+.form__group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.form__group input {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  outline: 0;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: 0.3s linear;
+}
+.form__group--2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.form__group--2 input {
+  width: calc(50% - 0.5px);
+}
+.form__group--2 input:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form__group--2 input:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form__group input:focus {
+  border-color: #eee;
+  background-color: #fff;
+}
+
+.form__submit {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.form__submit button {
+  font-family: "Poppins", sans -serif;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  background-color: var(--primary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.form__submit span {
+  margin: 0 auto;
+}
+
+.form__term {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.form__term label {
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+.form__term input[type=checkbox] {
+  cursor: pointer;
+}
+
+.link {
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  text-decoration: none;
+  color: var(--primary);
+}
+.link--underline {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
