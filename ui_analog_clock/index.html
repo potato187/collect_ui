@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour">
+        <div id="hr" class="hr"></div>
+      </div>
+      <div class="min">
+        <div id="mn" class="mn"></div>
+      </div>
+      <div class="sec">
+        <div id="sc" class="sc"></div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const hr = document.querySelector("div#hr");
+    const mn = document.querySelector("div#mn");
+    const sc = document.querySelector("div#sc");
+    const deg = 6;
+    setInterval(() => {
+      let day = new Date();
+      let hours = day.getHours() * deg * 5;
+      let minutes = day.getMinutes() * deg;
+      let seconds = day.getSeconds() * deg;
+
+      hr.style.transform = `rotateZ(${hours + minutes / 12}deg)`;
+      mn.style.transform = `rotateZ(${minutes}deg)`;
+      sc.style.transform = `rotateZ(${seconds}deg)`;
+    }, 1000);
+  </script>
+</html>
