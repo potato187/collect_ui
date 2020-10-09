@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fada3e;
+}
+
+.container {
+  width: 100rem;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.container .card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.container .card:nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+.container .card .imgBox {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+}
+.container .card .imgBox img {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container .card .content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  height: 25rem;
+}
+
+.container .card .content div {
+  padding: 2rem;
+  text-align: center;
+}
+
+.container .card .container div h2 {
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    margin: 5rem;
+  }
+
+  .container .card {
+    flex-direction: row;
+    margin: 1rem 0;
+  }
+
+  .container .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .container .card .imgBox,
+  .container .card .content {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .container .card {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .container .card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .container .card .imgBox,
+  .container .card .content {
+    width: 100%;
+  }
+}
