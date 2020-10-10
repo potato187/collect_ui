@@ -1,0 +1,210 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit !important;
+  color: currentColor !important;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 10vh;
+  margin: auto;
+}
+
+header .logo-container {
+  flex: 1;
+  display: flex;
+}
+
+header .logo-container .logo {
+  font-weight: 400;
+  margin: 0.5rem;
+}
+
+header nav {
+  flex: 2;
+}
+
+header nav .nav-links {
+  display: flex;
+  justify-content: space-around;
+  color: #5f5f79;
+}
+
+header nav .nav-link .nav-link {
+  font-size: 1.8rem;
+}
+
+header .cart {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  min-height: 80vh;
+  margin: auto;
+}
+.presentation .introduction {
+  flex: 1;
+}
+
+.presentation .introduction .intro-text h1 {
+  font-size: 4.4rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.presentation .introduction .intro-text p {
+  margin-top: 0.5rem;
+  font-size: 2.2rem;
+  color: #585772;
+}
+
+.presentation .cover {
+  flex: 1;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+.presentation .cover img {
+  height: 100%;
+  filter: drop-shadow(0px 5px 3px black);
+  animation: drop 1.5s ease;
+}
+
+.buttons {
+  padding: 5rem 0px 0px 0px;
+}
+
+.btn {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 15rem;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-select {
+  color: #c36cbb;
+  border: 2px solid #c36cbb;
+}
+
+.btn-add {
+  background-color: #c36cbb;
+  color: #fff;
+  margin: 3rem 0rem 0rem 3rem;
+}
+
+.circle {
+  position: absolute;
+  z-index: -1;
+}
+
+.circle-big {
+  top: 0;
+  right: 0;
+
+  height: 80%;
+  opacity: 0.6;
+}
+
+.circle-medium {
+  top: 30%;
+  right: 30%;
+
+  height: 60%;
+  opacity: 0.4;
+}
+
+.circle-small {
+  bottom: 0;
+  left: 20%;
+}
+
+.laptop-select {
+  width: 15%;
+
+  display: flex;
+  justify-content: space-around;
+
+  position: absolute;
+  right: 20%;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: column;
+  }
+
+  .introduction {
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+
+  .intro-text p {
+    font-size: 1.8rem;
+  }
+
+  .buttons {
+    padding: 1rem 0 0 0;
+  }
+
+  .laptop-select {
+    bottom: 5%;
+    right: 50%;
+    width: 50%;
+    transform: translate(50%, 5%);
+  }
+
+  .presentation .cover img {
+    height: 80%;
+  }
+
+  .circle {
+    opacity: 0.2;
+  }
+}
