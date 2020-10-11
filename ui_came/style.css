@@ -1,0 +1,253 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font: 1.6rem/1.5 "Poppins", sans-serif;
+  background-color: #f4f4f4;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  color: currentColor;
+  cursor: pointer;
+}
+textarea,
+button,
+input {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  height: 3.5rem;
+  background-color: #e8491d;
+  padding: 0rem 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-submit {
+  margin-top: 2rem;
+}
+.dark {
+  padding: 1.5rem;
+  background-color: #35424a;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Header */
+
+header {
+  background-color: #35414a;
+  color: #fff;
+
+  min-height: 7rem;
+  border-bottom: 3px solid #e8491d;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #branding,
+heder nav {
+  flex: 1;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  display: inline;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+header li a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+header .highlight,
+header li.current {
+  color: #e8491d;
+}
+
+header li:hover {
+  color: #ccc;
+}
+
+#showcase {
+  min-height: 40rem;
+  background: url("./images/showcase.jpg") no-repeat 0 -40rem;
+  text-align: center;
+  color: #fff;
+}
+
+#showcase h1 {
+  margin-top: 10rem;
+  font-size: 5.5rem;
+  margin-bottom: 1rem;
+}
+
+#showcase p {
+  font-size: 2rem;
+}
+
+#newsletter {
+  padding: 1.5rem;
+  color: #fff;
+  background-color: #35424a;
+}
+
+#newsletter .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#newsletter input[type="email"] {
+  box-sizing: content-box;
+  padding: 0.4rem;
+  height: 2.5rem;
+  width: 25rem;
+  color: red;
+  text-indent: 10px;
+}
+
+#boxes {
+  margin-top: 2rem;
+}
+
+#boxes .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#boxes .box {
+  flex: 1;
+  text-align: center;
+}
+
+#boxes .box img {
+  width: 9rem;
+  object-fit: cover;
+}
+
+footer {
+  color: #fff;
+  background-color: #e8491d;
+  text-align: center;
+
+  flex-shrink: 0;
+}
+
+/* About page */
+section#main .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+article#main-col {
+  flex: 2;
+  margin-right: 5rem;
+}
+aside#sidebar {
+  flex: 1;
+}
+
+/* services page */
+
+ul#services li {
+  padding: 2rem;
+  border: 2px solid #ccc;
+  margin-bottom: 0.5rem;
+  background-color: #e6e6e6;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 760px) {
+  /* home */
+  .btn-submit {
+    margin-top: 0;
+  }
+  header .container,
+  #newsletter .container,
+  #boxes .container {
+    flex-direction: column;
+  }
+
+  #newsletter h1 {
+    font-size: 2.5rem;
+  }
+
+  /* about page */
+
+  section#main .container {
+    flex-direction: column;
+  }
+
+  article#main-col,
+  aside#sidebar {
+    flex: 1;
+  }
+
+  /* service */
+
+  aside#sidebar .quote {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  aside#sidebar .quote div {
+    margin-bottom: 0.5rem;
+  }
+}
