@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/1f067ec628.js"></script>
+    <title>SignUp</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="login__wrapper">
+        <h1 class="login__heading">Sign Up</h1>
+        <button class="login__button">
+          <span class="login__button--social">
+            <img src="images/google.svg" alt="icon" />
+          </span>
+          <span class="login__button--text">Sign up width Google</span>
+        </button>
+        <div class="login__or"><span>or</span></div>
+
+        <form action="#" class="form" autocomplete="off">
+          <div class="form__group">
+            <label for="fullName" class="form__label">Full Name</label>
+            <input
+              type="text"
+              class="form__input"
+              id="fullName"
+              placeholder="Eg: John Doe"
+            />
+          </div>
+          <div class="form__group">
+            <label for="email" class="form__label">Email</label>
+            <input
+              type="email"
+              class="form__input"
+              id="email"
+              placeholder="Eg: johndoe@gmail.com"
+            />
+          </div>
+          <button class="form__submit" type="submit">Sign Up</button>
+
+          <p class="form__already">
+            <span>Already have a account?</span>
+            <a href="#" class="form__link">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
