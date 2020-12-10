@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pepsi</title>
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#">
+          <img src="/images/logo.png" alt="" />
+        </a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>
+            That's What <br />
+            <span>I like</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi
+            voluptates temporibus officia assumenda ratione. Tempore
+            perspiciatis reprehenderit voluptatum sequi. Est odit laborum quae
+            tempora cum fugit hic repellendus assumenda! Maiores.
+          </p>
+          <a href="#">View All Products</a>
+        </div>
+        <div class="imgBox">
+          <img src="/images/pepsi001.png" alt="pepsi" id="banner" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li><img src="/images/pepsi001.png" class="thumb-img" alt="" /></li>
+        <li><img src="/images/pepsi002.png" class="thumb-img" alt="" /></li>
+        <li><img src="/images/pepsi003.png" class="thumb-img" alt="" /></li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="/images/facebook.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/instagram.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/images/twitter.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script type="text/javascript">
+      let images = document.querySelectorAll("img.thumb-img");
+      let sec = document.querySelector("section.sec");
+      let banner = document.querySelector("img#banner");
+      [...images].map((img) => {
+        img.addEventListener("click", sildImage);
+      });
+
+      function fileName(path) {
+        return path.split("\\").pop().split("/").pop();
+      }
+      function sildImage(event) {
+        let file = fileName(event.target.src);
+        banner.src = "/images/" + file;
+
+        let colors = {
+          pepsi001: "#0062be",
+          pepsi002: "#e60c2c",
+          pepsi003: "#1e1e1e",
+        };
+
+        sec.style.background = colors[file.split(".").shift()];
+      }
+    </script>
+  </body>
+</html>
